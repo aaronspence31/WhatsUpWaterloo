@@ -1,0 +1,29 @@
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark" style="background-color: #000000">
+    <div class="container-fluid">
+        <a class="navbar-brand text-warning font-weight-bold" href="#">WHAT'S UP WATERLOO?!</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <!--<a class="nav-link" href="/">Home</a>-->
+                <a class="nav-link text-light font-weight-bold" style href="/activities">Activities</a>
+                <a class="nav-link text-light font-weight-bold" href="/activities/new">Add New Activity</a>
+                <a class="nav-link text-light" href="/activities/food">Food</a>
+                <a class="nav-link text-light" href="/activities/events">Events</a>
+                <a class="nav-link text-light" href="/activities/night-life">Night-life</a>
+                <a class="nav-link text-light" href="/activities/outdoors">Outdoors</a>
+                <a class="nav-link text-light" href="/activities/shopping">Shopping</a>
+            </div>
+            <div class="navbar-nav ml-auto">
+                <% if(!currentUser) {%>
+                <a class="nav-link text-light" href="/login">Login</a>
+                <a class="nav-link text-light" href="/register">Register</a>
+                <% } else {%>
+                <a class="nav-link text-light" href="/logout">Logout</a>
+                <% } %>
+            </div>
+        </div>
+    </div>
+</nav>
